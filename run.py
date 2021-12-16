@@ -78,7 +78,7 @@ hashFile.close()
 
 #머지할 브랜치로 이동
 os.system("git add .")
-os.system("git commit -m 'create commitFile'")
+os.system('git commit -m "create commitFile"')
 os.system("git checkout "+releaseBranch)
 
 #파일을 읽어서 git cherry-pick으로 커밋들을 머지.
