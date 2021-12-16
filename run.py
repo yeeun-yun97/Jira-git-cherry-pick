@@ -47,7 +47,7 @@ os.system(f"git checkout {developBranch}")
 for i in range(len(testCommits)):
 	count=testCommits[i]
 	for j in range(count):
-		os.system(f"ls -l > {testFilePrefix}_{i}_{j}")
+		os.system(f"pwd > {testFilePrefix}_{i}_{j}")
 		os.system("git add .")
 		os.system(f"git commit -m '{testCommitPrefix}{i}({j+1}/{count})'")
 
