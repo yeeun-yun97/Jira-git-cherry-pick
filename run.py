@@ -67,8 +67,10 @@ ticketNameFile.close()
 grep = "git log --pretty=format:%H"
 for pick in picks:
     pick=pick.strip()
-    grep+=(f" --grep={pick}\s")
+    grep=(f"{grep} --grep={pick}\s")
+os.system("echo \n")
 os.system("echo "+grep)
+os.system("echo \n")
 os.system(grep+"> "+commitHashFileName)
 
 #커밋 해시를 담은 파일을 읽어오기
