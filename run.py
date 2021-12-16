@@ -58,7 +58,7 @@ ticketNameFile=open(ticketNameFileName,'w+')
 for i in range(len(testCommits)):
 	if(random.random()>0.7): 
 		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
-		targetCommitCount+=testCommits[i]
+		targetCommitSum+=testCommits[i]
 picks=ticketNameFile.readlines()
 ticketNameFile.close()
 
@@ -88,6 +88,9 @@ for hash in hashs:
 cherry="git cherry-pick "+cherry
 os.system("echo "+cherry)
 os.system(cherry)
+
+#예상한 결과 print 하기
+os.system(f"echo commit count: {targetCommitSum}"
 
 
 
