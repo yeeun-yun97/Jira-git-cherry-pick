@@ -32,6 +32,7 @@ os.system("cat startMessage")
 
 #git init
 os.system("git init")
+os.system("git config --global core.autocrlf false")
 os.system("git add .")
 os.system("git commit -m 'init'")
 
@@ -53,7 +54,7 @@ for i in range(len(testCommits)):
 
 #create searchTargetFile
 targetCommitSum=0;
-ticketNameFile=open(ticketNameFileName)
+ticketNameFile=open(ticketNameFileName,'w+')
 for i in range(len(testCommits)):
 	if(random.random()>0.7): 
 		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
