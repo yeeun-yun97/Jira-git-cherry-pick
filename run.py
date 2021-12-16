@@ -60,8 +60,9 @@ for i in range(len(testCommits)):
 		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
 		targetCommitSum+=testCommits[i]
 ticketNameFile.close()
+ticketNameFile=open(ticketNameFileName,'w+')
 picks=ticketNameFile.readlines()
-
+ticketNameFile.close()
 
 
 #파일을 읽어서 git log --grep으로 검색하여 커밋 해시들을 파일에 저장.
