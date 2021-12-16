@@ -71,7 +71,7 @@ for pick in picks:
 os.system(grep+"> "+commitHashFileName)
 
 #커밋 해시를 담은 파일을 읽어오기
-hashFile = open(commitFile)
+hashFile = open(commitHashFileName)
 hashs=hashFile.readlines()
 hashFile.close()
 
