@@ -90,7 +90,7 @@ os.system("echo "+cherry)
 os.system(cherry)
 
 #예상한 결과 print 하기
-os.system(f"echo commit count: {targetCommitSum}"
+os.system(f"echo commit count: {targetCommitSum}")
 
 
 
