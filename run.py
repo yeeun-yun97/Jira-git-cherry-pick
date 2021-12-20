@@ -59,8 +59,6 @@ for i in range(len(testCommits)):
 	if(random.random()>0.7): 
 		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
 		targetCommitSum+=testCommits[i]
-ticketNameFile.close()
-ticketNameFile=open(ticketNameFileName,'w+')
 picks=ticketNameFile.readlines()
 ticketNameFile.close()
 
@@ -69,10 +67,8 @@ ticketNameFile.close()
 grep = "git log --pretty=format:%H"
 for pick in picks:
     pick=pick.strip()
-    grep=(f"{grep} --grep={pick}\s")
-os.system("echo \n")
+    grep=(f"{grep} --grep={pick}\\s")
 os.system("echo "+grep)
-os.system("echo \n")
 os.system(grep+"> "+commitHashFileName)
 
 #커밋 해시를 담은 파일을 읽어오기
@@ -82,7 +78,7 @@ hashFile.close()
 
 #머지할 브랜치로 이동
 os.system("git add .")
-os.system('git commit -m "create commitFile"')
+os.system("git commit -m 'create commitFile'")
 os.system("git checkout "+releaseBranch)
 
 #파일을 읽어서 git cherry-pick으로 커밋들을 머지.
