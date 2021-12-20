@@ -4,7 +4,8 @@ import random
 testFilePrefix="testFile"
 testCommitPrefix="TEST-"
 testCommits=[
-1,2,3,4,2,4,6,3,5,3,6,2,3,4,2,3,8,2,3,5,
+1,2,3,4,2#,
+#4,6,3,5,3,6,2,3,4,2,3,8,2,3,5,
 #2,8,3,8,3,4,2,1,5,5,5,9,2,5,9,2,9,1,8,5,
 
 #5,8,6,7,1,8,7,5,9,4,8,2,8,7,5,1,6,5,3,5,
@@ -67,6 +68,7 @@ ticketNameFile.close()
 grep = "git log --pretty=format:%H"
 for pick in picks:
     pick=pick.strip()
+    os.system(f"echo {pick}")
     grep=(f"{grep} --grep={pick}\\s")
 os.system("echo "+grep)
 os.system(grep+"> "+commitHashFileName)
