@@ -57,7 +57,7 @@ for i in range(len(testCommits)):
 targetCommitSum=0;
 ticketNameFile=open(ticketNameFileName,'w+')
 for i in range(len(testCommits)):
-	if(random.random()>0.7): 
+	if(random.random()<0.7): 
 		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
 		targetCommitSum+=testCommits[i]
 picks=ticketNameFile.readlines()
