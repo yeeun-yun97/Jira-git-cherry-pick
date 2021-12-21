@@ -5,8 +5,8 @@ Project Created by.
   \__, |\___|\___|\__,_|_| |_|      \__, |\__,_|_| |_|    
    __/ |                             __/ |                
   |___/                             |___/                 
-#ProjName: Git cherry-pick Test    
-###Summary
+# ProjName: Git cherry-pick Test    
+### Summary
 ***
 0. 깃 init, release, develop 두 가지 브랜치 생성.
 1. dev에 수백개의 커밋을 쌓는다.
@@ -15,6 +15,6 @@ Project Created by.
 4. 체리 픽을 사용하여 3번 커밋들만 머지해본다.
     
     
-###결론    
+### 결론    
 git grep로 검색할 때, 내 컴퓨터 기준으로 145여개 티켓을 검색할 수 있다. 
 cherry-pick으로 머지할 때, 내 컴퓨터 기준으로 70여개 커밋 해시를 선택할 수 있다.
