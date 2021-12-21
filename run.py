@@ -59,7 +59,7 @@ ticketNameFile=open(ticketNameFileName,'w+')
 for i in range(len(testCommits)):
 	if(random.random()<0.7): 
 		os.system(f"echo {testCommitPrefix}{i}")
-		ticketNameFile.write(f"{testCommitPrefix}{i}\\n")
+		ticketNameFile.write(f"{testCommitPrefix}{i}\n")
 		targetCommitSum+=testCommits[i]
 ticketNameFile.close()
 ticketNameFile=open(ticketNameFileName)
