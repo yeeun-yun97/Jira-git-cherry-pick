@@ -1,6 +1,11 @@
 # ProjName: Git cherry-pick Test    
+
+### Stack
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+
+
 ### Summary
-***
 0. 깃 init, release, develop 두 가지 브랜치 생성.
 1. dev에 수백개의 커밋을 쌓는다.
 2. 검색할 커밋 메시지 검색어들을 저장한 파일을 마련한다.
