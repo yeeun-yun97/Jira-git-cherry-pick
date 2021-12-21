@@ -61,6 +61,8 @@ for i in range(len(testCommits)):
 		os.system(f"echo {testCommitPrefix}{i}")
 		ticketNameFile.write(f"{testCommitPrefix}{i}\\n")
 		targetCommitSum+=testCommits[i]
+ticketNameFile.close()
+ticketNameFile=open(ticketNameFileName)
 picks=ticketNameFile.readlines()
 ticketNameFile.close()
 
