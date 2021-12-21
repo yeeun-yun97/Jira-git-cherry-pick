@@ -51,7 +51,7 @@ for i in range(len(testCommits)):
 	for j in range(count):
 		os.system(f"pwd > {testFilePrefix}_{i}_{j}")
 		os.system("git add .")
-		os.system(f"git commit -m '{testCommitPrefix}{i}({j+1}/{count})'")
+		os.system(f"git commit -m '{testCommitPrefix}{i} ({j+1}/{count})'")
 
 #create searchTargetFile
 targetCommitSum=0;
