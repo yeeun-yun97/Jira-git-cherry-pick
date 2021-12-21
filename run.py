@@ -72,7 +72,7 @@ grep = "git log --pretty=format:%H"
 for pick in picks:
     pick=pick.strip()
     os.system(f"echo {pick}")
-    grep=(f"{grep} --grep={pick}\\s")
+    grep=(f'{grep} --grep="{pick} "')
 os.system("echo "+grep)
 os.system(grep+"> "+commitHashFileName)
 
