@@ -1,18 +1,18 @@
-# ProjName: Git cherry-pick Test    
+# ProjName: Git cherry-pick Test
 
+
+### why
+회사에서 CI/CD 관리를 하게 되었다. 지라 티켓을 커밋 메시지로 하여 푸시하고, 지라 티켓의 일부분만 골라서 머지할 수 있는 방법이 없을까 고민해 보게 되었다.
+    
+    
 ### Stack
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-
-
+    
+    
 ### Summary
-0. 깃 init, release, develop 두 가지 브랜치 생성.
-1. dev에 수백개의 커밋을 쌓는다.
-2. 검색할 커밋 메시지 검색어들을 저장한 파일을 마련한다.
-3. 2번 파일을 통해 깃 로그에서 grep로 커밋들의 해시를 얻는다.
-4. 체리 픽을 사용하여 3번 커밋들만 머지해본다.
-    
-    
-### 결론    
-git grep로 검색할 때, 내 컴퓨터 기준으로 145여개 티켓을 검색할 수 있다. 
-cherry-pick으로 머지할 때, 내 컴퓨터 기준으로 70여개 커밋 해시를 선택할 수 있다.
+0. 깃을 초기화하고, main,release,develop 세 개의 브랜치 생성한다.
+1. develop 브랜치에서 수 백개의 커밋을 쌓는다.
+2. 커밋을 70% 확률로 선택하여 커밋 메시지를 저장한다. (지라 티켓 번호 부분)
+3. 2번에서 저장한 파일을 읽어, git log --grep으로 커밋 해시들을 얻고, 파일로 저장한다.
+4. 3번에서 저장한 파일을 읽어 git cherry-pick으로 커밋들을 머지한다.
